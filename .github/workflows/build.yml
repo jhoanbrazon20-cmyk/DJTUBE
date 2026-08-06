@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ./DJTube_Android_Studio_Project
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -28,4 +32,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
-        path: app/build/outputs/apk/debug/app-debug.apk
+        path: DJTube_Android_Studio_Project/app/build/outputs/apk/debug/app-debug.apk
